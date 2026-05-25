@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage[margin=1.5cm]{geometry}
+
+\title{AskaryanPaper4}
+\author{Jordan Hanson}
+\date{May 2026}
+
+\begin{document}
+\twocolumn
+\maketitle
+
+\section{The Derivation}
+
+Let $\epsilon = \omega_0/\omega_{\rm C}$.  The signal model is:
+
+\begin{equation}
+s(t) = E_0
+\begin{cases}
+\left(1-\frac{1}{2}\epsilon\right) e^{\omega_0 t} & \text{if } t < 0 \\
+2e^{-2\omega_{\rm C}t} - \left(1+\frac{1}{2}\epsilon\right)e^{-\omega_0 t}  & \text{if } t \ge 0 \label{eq:1}
+\end{cases}
+\end{equation}
+
+Let $u(t)$ represent the Heaviside step function.  The response model is:
+
+\begin{equation}
+r(t) = R_0 \cos(2\pi f_0 t) e^{-2\pi\gamma t} u(t) \label{eq:2}
+\end{equation}
+
+The task is to convolve $r(t)$ and $s(t)$.  For the case $t<0$, the convolution is
+
+\begin{multline}
+s * r = \\ E_0 R_0 \Re\int_{-\infty}^{\infty}\left(1-\frac{1}{2}\epsilon\right)e^{\omega_0t}e^{-\omega_0\tau}e^{2\pi jf_0\tau}e^{-2\pi\gamma\tau}u(\tau)d\tau
+\end{multline}
+
+Factor terms that do not involve $\tau$, and account for the step function:
+
+\begin{multline}
+s * r = \\ E_0 R_0 \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0t}\Re\int_{0}^{\infty}e^{-\omega_0\tau}e^{2\pi jf_0\tau}e^{-2\pi\gamma\tau}d\tau
+\end{multline}
+
+Let $k=\omega_0+2\pi\gamma-2\pi jf_0$.  We find
+
+\begin{equation}
+s * r = \\ E_0 R_0 \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0t}\Re\int_{0}^{\infty}e^{-k\tau}d\tau
+\end{equation}
+
+The final result for $t<0$ is
+
+\begin{equation}
+\boxed{
+s * r =  E_0 R_0 \left(1-\frac{1}{2}\epsilon\right)\Re(k^{-1})e^{\omega_0t}}
+\end{equation}
+
+The result is a rising exponential ($t<0$) that does not oscillate at the response frequency $f_0$.  Let $r_a$ be the analytic signal for $r(t)$, and let $s_+(t)$ and $s_-(t)$ be the piecewise branches of $s(t)$.  For the case of $t\ge 0$, we have
+
+\begin{multline}
+s * r = \\ E_0 R_0 \Re \left( \int_{-\infty}^t s_+(t-\tau) r_a(\tau) d\tau + \int_t^{\infty} s_-(t-\tau) r_a(\tau) d\tau\right)
+\end{multline}
+
+Using Eqs. \ref{eq:1} and \ref{eq:2}, we find
+
+\begin{multline}
+s * r = E_0 R_0 \Re \left( 2e^{-2\omega_C t}\int_0^t e^{2\omega_C \tau}r_a(\tau)d\tau \right. \\ - \left. \left(1+\frac{1}{2}\epsilon\right)e^{-\omega_0 t}\int_0^{t} e^{\omega_0 \tau} r_a(\tau)d\tau \right. \\ + \left. \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0 t}\int_t^{\infty} e^{-\omega_0 \tau} r_a(\tau) d\tau \right)
+\end{multline}
+
+Define the following constants, with units of frequency:
+
+\begin{align}
+z_1 &= 2\omega_C + 2\pi jf_0 -2\pi\gamma \\
+z_2 &= \omega_0 + 2\pi jf_0 -2\pi\gamma \\
+z_3 &= -\omega_0 + 2\pi jf_0 -2\pi\gamma
+\end{align}
+
+Using these definitions and Eq. \ref{eq:2}, the convolution becomes
+
+\begin{multline}
+s * r = E_0 R_0 \Re \left( 2e^{-2\omega_C t}\int_0^t e^{z_1 \tau}d\tau \right. \\ - \left. \left(1+\frac{1}{2}\epsilon\right)e^{-\omega_0 t}\int_0^{t} e^{z_2 \tau}d\tau\right. \\ + \left. \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0 t}\int_t^{\infty} e^{z_3 \tau}d\tau \right)
+\end{multline}
+
+Evaluating the integrals and distributing the $\Re$ operator:
+
+\begin{multline}
+s * r = E_0 R_0 \left( 2 e^{-2\omega_C t} \Re\left( z_1^{-1} e^{z_1 t} - z_1^{-1}\right) \right. \\ \left. - \left(1+\frac{1}{2}\epsilon\right)e^{-\omega_0 t} \Re\left( z_2^{-1} e^{z_2 t} - z_2^{-1}\right) \right. \\ \left. - \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0 t} \Re\left(z_3^{-1} e^{z_3 t}\right) \right)
+\end{multline}
+
+%=====Caution=====
+
+The real part of the inverse of a complex number $z$ is
+
+\begin{equation}
+\Re(z)^{-1} = z^{-2} \Re(z)
+\end{equation}
+
+Let $z = x+jy$.  The real part of a complex exponential divided by $z$ is
+
+\begin{equation}
+\Re\left(z^{-1} e^{zt}\right) = z^{-2}e^{xt}\left(x\cos(yt)+y\sin(yt)\right)
+\end{equation}
+
+\end{document}
