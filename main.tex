@@ -23,16 +23,17 @@
 \date{\today}
 
 \begin{abstract}
-We provide a fully analytic \textit{on-cone radiation} Ultra High Energy Cosmic Ray (UHECR) reconstruction model. Derived from known Radio Frequency (RF) dipole antenna responses and formulas for the Askaryan effect in antarctic ice. Allowing for a much richer analysis of the radiation's spectrum, extracted electric field, and hints at the flavor of neutrino candidates. Results and implications from running our model on UHECR candidate data is presented in the latter part of the work.
+We provide a fully analytic, full-spectrum, Ultra High Energy Cosmic Ray (UHECR) reconstruction model. Derived from known Radio Frequency (RF) dipole antenna responses and formulas for the Askaryan effect in antarctic ice. Allowing for a much richer analysis of the radiation's spectrum, extracted electric field, and open the avenue for experimental neutrino flavor physics. Results and implications from running our model on UHECR candidate data is presented in the latter part of the work.
 \end{abstract}
 
-\keywords{High Energy physics; Askaryan radiation; Mathematical physics; Neutrino candidate analysis}
+\keywords{High Energy physics; Askaryan radiation; Mathematical physics; Neutrino candidate; Cosmic Ray}
     
 \twocolumn
 \maketitle
 
 \section{Introduction}
 \label{sec:Int}
+
 \subsection{Table of Context}
 Section \ref{sec:Int} Table of Context and background  \\
 Section \ref{sec:Par} Parameters and their relevance \\
@@ -42,25 +43,31 @@ Section \ref{sec:Res} Results from the work \\
 Section \ref{sec:Imp} Speculations and Theory \\
 Section \ref{sec:Ack} Our thanks and appendices \\
 \subsection{Background}
-Close to the South Pole, UHECR have been observed to generate electromagnetic cascades in the 0.1-1 GHz Bandwidth through the Askaryan Effect. The Askaryan effect can be understood as an incident of the Cherenkov effect. The latter is observed when a quanta of radiation or mass travels within a dielectric material at velocities faster than the speed of light in the given. Distinguishably, runoff cascades of particles and (or) radiation are induced in the medium. 
-RF pulses generated during these so called "events" are recorded by RF Antenna installations allowing for study of \textit{off-cone} and \textit{on-cone} radiation. The geometric nature of the Askaryan effect therefore arises from the conic shape that the wave front of the cascade forms following the wake of the traveling quanta. This is analogous to the sonic boom left behind by a jet traveling faster than the speed of sound in air. Observed radiation may therefore be interpreted as outside of or within the Cherenkov angle $\theta_c$. Occurring when when $cos(\theta_c) = 1/n_{ice}$ where $n_{ice} = 1.78 \pm 0.003$. The key distinction being that within the Cherenkov angle the radiation is much more coherent, having a richer spectrum. In radiation physics, the "viewing angle" $\theta$, denotes ... measured from the ... axis. If $\theta = \theta_c$ then we are \textit{on-cone}.  
-Previous work on fully analytical models of the \textit{off-cone} radiation yielded strong correlation between model, simulation and observation.
-Detectors at the South Pole such as IceCube, the Askaryan Radio Array (ARA) and the Antarctic Ross Ice-Shelf Antenna Neutrino Array (ARIANNA) use RF dipole antennas to detect radiation spikes through the antarctic air and ice. 
 
-[[Write on the nature of detectors again, specifically channels]]
+Close to the South Pole, UHECR have been observed to generate electromagnetic cascades in the 0.1-1 GHz Bandwidth through the Askaryan Effect. The Askaryan effect can be understood as a case of the Cherenkov effect. The Cherenkov effect is observed when a particle travels within a dielectric material at velocities faster than the speed of light in the dielectric. This creates a wake of electromagnetic radiation trailing the incident particle. Distinguishably, in the Askaryan effect, runoff cascades of particles are induced in the medium. 
+Askaryan cascades also exhibit a geometric nature, analogous to sonic booms. The geometric nature arises from the runoff cascades spherically propagating outwards from the incident's path, we can treat these as instantaneous pulses. If we tangent the extent of each pulse in space, then the tangent of the set of pulses may be understood as the wave front of Askaryan radiation. The wavefront forms an angle, the Cherenkov angle $\theta_c$, to the last known location of the incident particle, denoting the point of a cone. 
+Furthermore, because each instantaneous pulse may interfere with another, there arises a \textit{viewing angle} where the radiation is most coherent. In radiation physics, the \textit{viewing angle} $\theta$, is where the given waves most constructively interfere with one another. If $\theta = \theta_c$, and our observation point falls within this angle, then we are \textit{on-cone}. The equality occurs when when $cos(\theta_c) = 1/n_{ice}$ ,and $n_{ice} = 1.78 \pm 0.003$. Which explains why an \textit{on-cone} equation may present an observer with a richer full-spectrum of information.
 
-These antennas, when shrouded in radiation, emit a "response" function. The required response function for these detectors has already been identified. If this response is convolved with a formula for the interacting radiation, then it is possible to derive the electromagnetic cascade's electric field from the derivative of our convolution. Where by convolution we mean to take the Fourier transform of both functions and multiply them together. Not only does the electric field give important information to those in UHECR detection, but parameterizing the Askaryan signal does too. Specifically, Askaryan models are used to search for neutrino candidates because the direction and depth where the radiation is emitted tracks the UHECR's path. Further and newer implications may be found in \ref{sec:Imp}.  
+[[Insert graphic of the Askaryan effect in ice]] \\
 
-[[include 3D graphic of the Askaryan effect within ice]]
+The type of induced cascade is determined by properties of the incident UHECR, leading to two observed phenomena. The first is that of a "hadronic" cascade, aptly named so because of the hadrons interacted with. For example, a proton may be the incident UHECR and strike a nucleus, triggering a hadronic cascade. The second case is that of a "Electromagnetic" cascade, in which the cascade is dominated by runoff electromagnetic radiation rather than hadrons. \\
+
+Distinction between electromagnetic and hadronic cascades has been done previously by [means]....... Which tell us ..... \\
+
+In order to detect the cascades, Askaryan class detectors have been deployed to the antarctic. The antarctic is a prime location for UHECR detection because of its isolation from human induced RF noise, elevation and dielectric composition. Antarctic ice is bored into, and a cable consisting of several dipole antennas is set into position. Each dipole, naturally, has several channels in this case numbered 1 through 7 from highest elevation to lowest. Multiple cables are then connected to a central, semi-autonomous, surface station. RF pulses generated during cascades are recorded by the RF Antenna installations, allowing for study of \textit{off-cone} and \textit{on-cone} radiation. Detectors at the South Pole such as IceCube, the Askaryan Radio Array (ARA) and the Antarctic Ross Ice-Shelf Antenna Neutrino Array (ARIANNA) use RF dipole antennas to detect radiation spikes through the antarctic air and ice. The RF antennas, when shrouded in radiation, emit a "response" function. Thankfully, the required response function has already been identified through the field of digital-signal-processing. If this response is convolved with a function for the interacting radiation, then it is possible to derive the electromagnetic cascade's electric field from the derivative of the convolution. Where by convolution we mean to take the Fourier transform of both functions and multiply the integrals together. From here on, we refer to the product of the convolved functions as the "waveform", see section \ref{sec:Par} for clarification. From our work, we will provide implications from data collected in the above fashion in section \ref{sec:Imp}.  \\
+Previous work on a fully analytic \textit{off-cone} radiation model yielded strong correlation between model, simulation and observation. As such we endeavor to demonstrate an \textit{on-cone} model, and comparisons between the two. 
 
 \section{Parameters, definitions and units}
-Here, we will briefly look over the parameters and variables relevant to our equations for the \textit{on-cone} field equations, and any physical quantities which we can derive from the equations; such as the form factor, electric field, or path of the event.
+Here, we will briefly look over the parameters and variables relevant to our equations for the \textit{on-cone} field equations, and any physical quantities which we can derive from the equations; such as the waveform, electric field, or path of the event.
 The parameters in Table 1. were greatly encountered in the literature review of previous works in the field of UHECR detection at the South Pole for this paper. Because they prove useful to understanding the following and many other works in the genre, we have decided to include a parameter table for ease of reading and access to information in our work.
-From the geometric nature of the Askaryan effect the cascade amplitude $E_0$ ...
-Meanwhile, we attain the $\gamma$, $f_0$ and $R_0$ parameters straight from the discipline of digital signal processing. Specifically ...
-The frequency parameters of $\omega_0$ and $\omega_c$ come about from the derivation in [cite] and we can define them concretely as .....
-In our work we will take the convolution of two functions $s(t)$ and $r(t)$, the result will be referred to as the form factor. We, and the literature, use this term to mean ... in which the terms in the form factor tell us ... about the cascade.
-As mentioned previously, the derivative for the form factor relates the electric field (strength?) of the cascade. 
+From the geometric nature of the Askaryan effect the cascade amplitude, $E_0$, is interpreted from detectors reading ...  \\
+"if the quanta has more energy it creates more charge so more radiation is emitted" (must be coherent to be true) ((2022 paper read more on it? 2017?) \\ 
+
+Meanwhile, we attain the $\gamma$, $f_0$ and $R_0$ parameters straight from the discipline of digital signal processing. Specifically; $\gamma$ is the exponential decay constant for the RF dipole response function, $f_0$ is the resonance frequency of the dipole, and lastly $R_0$ is a constant arising from the ... properties of the antenna that .... \\
+
+The frequency parameters of $\omega_0$ and $\omega_c$ come about from the derivation in [...] and we can define them concretely as ... , ... section \ref{sec:Imp} will explore how fine tuning of these frequencies hints at ... (the flavor of a neutrino candidates? [big if true]). \\ 
+
+In our work we will take the convolution of two functions $s(t)$ and $r(t)$, the result will be referred to as the waveform. We, and the literature, use this term to mean the physical interpretation of the Askaryan cascade in which the terms composing the waveform tell us the longitudinal length, instantaneous charge density, maximum number of displaced particles and form factor. The derivative of the form factor leads to the electric field of the cascade.
 
 \label{sec:Par}
 \begin{table}
@@ -97,12 +104,11 @@ s(t) = E_0
 \end{cases}
 \end{equation}
 
-Let $u(t)$ represent the Heaviside step function to ensure causality in our mathematics. Then, for the South Pole dipole RF antennas used in detection, the response model is:
+Let $u(t)$ represent the Heaviside step function to ensure causality in our mathematics. Then, for the South Pole dipole RF antennas used in detection, the response function is:
 
 \begin{equation}
 r(t) = R_0 \cos(2\pi f_0 t) e^{-2\pi\gamma t} u(t) \label{eq:2}
 \end{equation}
-Where $\gamma$ is the exponential decay constant for the RF dipole response function.
 The task is to convolve $r(t)$ and $s(t)$. A strategy derived from Digital Signal Processing.  For the case where $t<0$, the convolution is:
 
 \begin{multline}
@@ -116,8 +122,7 @@ s * r = \\ E_0 R_0 \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0t}\Re\int_{0}^{\
 \\ = E_0 R_0 \left(1-\frac{1}{2}\epsilon\right)e^{\omega_0t}\Re\int_{0}^{\infty}e^{-(\omega_0+2\pi\gamma-2\pi jf_0)\tau}d\tau
 \end{multline}
 
-The Heavyside step function maintains causality, ensuring our third integral does diverge. 
-The final result for $t<0$ is
+The Heavyside step function here ensures our third integral does not diverge such that the complex result for $t<0$ is
 
 \begin{equation}
 s * r =  E_0 R_0 \left(1-\frac{1}{2}\epsilon\right)\Re((\omega_0+2\pi\gamma-2\pi jf_0)^{-1})e^{\omega_0t}
@@ -168,7 +173,7 @@ Where $z^*$ denotes the complex conjugate. And for our current abstract case, $z
 z^{-1} = \frac{1}{z} = \frac{z^*}{zz^*} = \frac{\alpha-j\beta}{\alpha^2+\beta^2}
 \end{equation}
 
-The third rule in our complex analysis we must derive from our rules of exponents and euler's identity. Where of course:
+The third rule in our complex analysis we must derive from our rules of exponents and Euler's identity. Recall:
 
 \begin{multline}
  Euler's \ identity: \ e^{i\pi} + 1= 0
@@ -183,7 +188,7 @@ It follows then, that if we follow these rules for every term for which we want 
 \begin{equation}
  \Re( z_n^{-1} e^{z_n t} - z_n^{-1}) = \frac{\alpha_n}{\alpha_n^2+\beta_n^2}e^{\alpha_n t}cos(\beta t)) - \frac{\alpha_n}{\alpha_n^2+\beta_n^2}   
 \end{equation}
-The third term operated on by $\Re$ tends to infinity so we do not observe a subtracted value. And the Heavyside-Step function is applied -as before. Such that the real part of the convolution for an on-cone $t\ge0$ signal is:
+The third term operated on by $\Re$ has a sub-term which tends to infinity, so we do not observe a subtracted value. And the Heavyside-Step function is applied -as before. Such that the real part of the convolution for an on-cone $t\ge0$ signal is:
 
 \begin{multline}
 s * r = E_0R_0(2e^{-2\omega_ct}(\frac{\alpha_{z_1}}{\alpha_{z_1}^2+\beta_{z_1}^2}e^{\alpha_{z_1}t}cos(\beta_{z_1}t)- \frac{\alpha_{z_1}}{\alpha_{z_1}^2+\beta_{z_1}^2}) \\
@@ -193,26 +198,27 @@ s * r = E_0R_0(2e^{-2\omega_ct}(\frac{\alpha_{z_1}}{\alpha_{z_1}^2+\beta_{z_1}^2
 
 \section{Reconstruction}
 \label{sec:Rec}
-With our \textit{on-cone} equation solved for, we may closely reconstruct a UHECR candidate event using an algorithm, and known open access candidate event's data. Recall equation eq.5 and eq.18, respectively the final results for when $t<0$ and $t\ge0$. In order for our reconstruction to be sufficiently accurate, we must treat these functions as a piecewise pair to model the overall time-lapse of the event -albeit there is of course no 'negative' time $t<0$. The 'negative' time arises from the RF antenna interpretation of $t=0$ being the peak of the Askaryan induced cascade. This must be accounted for in the code. Also, by following similar steps in \ref{sec:Der}, Eq 5 also yields a real solution. The algebra is trivial and is best left as an exercise to the reader. Our algorithm then uses our final piecewise solution to parse through the frequency parameters, $\omega_0$ and $\omega_c$, .  
-The reasoning for our scanning of this parameter space can be found in \ref{sec:Imp}. 
-We base our own model from an algorithm which previously was used to work on ARA UHECR event candidate data. This previous algorithm worked with \textit{off-cone} radiation. The data sets for the UHECR event candidates were made possible by the ARA collaboration through a data release. Assumptions of the ARA detector are made in that; \newline
+With our \textit{on-cone} equations solved for, we may closely reconstruct a UHECR candidate event using an algorithm, and known open access candidate event's data. Recall equation eq.5 and eq.18, the final results for $t<0$ and $t\ge0$. In order for our reconstruction to be sufficiently accurate, we must treat these functions as a piecewise function to model the overall time-lapse of the event -albeit there is of course no 'negative' time, $t<0$. The 'negative' time arises from the RF antenna interpretation of $t=0$ being the peak of the Askaryan induced cascade. This must be accounted for in the code. Also, by following similar steps in \ref{sec:Der}, Eq 5 also yields a real solution. The algebra is trivial and is best left as an exercise to the reader. Our algorithm then uses our final piecewise solution to parse through the frequency parameters, $\omega_0$ and $\omega_c$.   
+
+We hypothesized that by scanning these parameters .... 
+
+We base our current model from a previous algorithm which was used to work on ARA UHECR event candidate data. This previous algorithm worked with \textit{off-cone} radiation. The data set for the UHECR event candidates was made possible by the ARA collaboration through a data release [zenodo]. Assumptions of the ARA detector are made in that; \newline
 1. Detector calibration pulses closely match actual cosmic ray events \newline
 2. The parameter $\gamma$ is the average value across all 5 of the detector's channels found through the previous algorithm's work. \newline
 3. The parameter $f_0$ is the average value across all 5 of the detector's channels found through the previous algorithm's work. \newline
-4. We do not change the sampling rate of the detector or trace length of the incident event across trials (1.5 and 512 in our code respectively)
+4. We do not change the sampling rate of the detector or trace length of the incident event across trials (1.5 and 512 in our code respectively). We acknowledge that the trace length is a good parameter to scan per waveform, but control the variable in order to better understand the parsed $\omega$ frequencies.
 
-Because we wanted to parse through the frequency parameters, $\omega_0$ and $\omega_c$, which occur simultaneously in Eq 18, a nested loop scanning a numpy array to maximize $\epsilon$ is written into the code. To maximize $\epsilon$ we matched our form factors to raw ARA data -which came in the form of a Comma Separated Values (CSV) file. The CSV is imported into the code and cross correlated with the model. When $\epsilon$ is maximized, the best fit values are printed as well as the correlation coefficient between model and data , $\rho$, per event ID.
-The code for our model can be found in \ref{sec:Res} Appendix [B].
+Because we wanted to parse through the frequency parameters, $\omega_0$ and $\omega_c$, a nested loop scanning a numpy array to maximize our correlation coefficient $\rho$ per $\omega$ is written into the code. The parameters begin with a value of 0.1, and parse at a sensitivity of 0.1 up a value of 7. Our $\rho$ is a comparison of our computed waveform and the raw ARA data. The data file is imported into the code and cross correlated with the piecewise model. When $\rho$ is maximized, per event ID, the best fit values are printed. 
+The code for our model can be found in \ref{sec:Res} Appendix [B]. 
 
-Our algorithm has the ability to distinguish between RF channels [[need to explain channels in sec I then, also include ARA or in abstract how Vpol detectors work]]
-this implies with information on channel location, time of data, etc.... you can track the cosmic ray.....
-this implies neutrinos if from underground....
-[[split between this section and implications section?]]
+Our algorithm has the ability to distinguish between RF channels [[need to explain channels in sec I then, also include ARA or in abstract how Vpol detectors work]] 
+this implies with information on channel location, time of data, etc.... you can track the cosmic ray..... 
+this implies neutrinos if from underground.... 
+[[split between this section and implications section?]] 
 
 \section{Results}
-Observe Table II. We present that our mathematical physics ..[how close were we].. real phenomena insofar that our assumptions in section \ref{sec:Rec} are followed. Our average $\rho$ value is $= blank$ across the twelve candidate events. [[calculate margin of error]]
-Our use of an algorithm...... faster..... allowing for...... which can also lead to .......
-
+Observe Table \ref{tab:results2}. We present that our mathematical physics ..[how close were we].. real phenomena insofar that our assumptions in section \ref{sec:Rec} are followed. Use of our model offered a fast, physical alternative to computationally intensive Monte Carlo techniques, enabling efficient scanning of UHECR candidates in data from the Askaryan Radio Array (ARA), RNO-G, PUEO, and IceCube-Gen2 observatories.
+Our average $\rho$ value is $= 0.730$ across the thirteen candidate events. [[calculate margin of error]] 
 
 \label{sec:Res}
 
@@ -220,20 +226,20 @@ Our use of an algorithm...... faster..... allowing for...... which can also lead
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
-\textbf{Event ID} & $\omega_c$ & $\omega_0$ & $\rho$ \\
-1915-26288 & ... & ... & ... \\
-1957-13330 & ... & ... & ... \\
-2171-31805 & ... & ... & ... \\
-2250-20189 & ... & ... & ... \\
-2352-85489 & ... & ... & ... \\
-2375-17342 & ... & ... & ... \\
-2529-09767 & ... & ... & ... \\
-2716-58611 & ... & ... & ... \\
-2782-00106 & ... & ... & ... \\
-2955-47449 & ... & ... & ... \\
-2961-98361 & ... & ... & ... \\
-2978-29412 & ... & ... & ... \\
-3352-89556 & ... & ... & ... \\
+\textbf{Event ID} & $\omega_0$ & $\omega_c$ & $\rho$ \\
+1915-26288 & 0.2 & 0.1 & 0.782 \\
+1957-13330 & 0.2 & 0.1 & 0.667 \\
+2171-31805 & 0.2 & 0.1 & 0.707 \\
+2250-20189 & 0.2 & 0.1 & 0.727 \\
+2352-85489 & 0.2 & 0.1 & 0.815 \\
+2375-17342 & 0.2 & 0.1 & 0.592 \\
+2529-09767 & 0.2 & 0.1 & 0.780 \\
+2716-58611 & 0.2 & 0.1 & 0.785 \\
+2782-00106 & 0.2 & 0.1 & 0.755 \\
+2955-47449 & 0.2 & 0.1 & 0.632 \\
+2961-98361 & 0.2 & 0.1 & 0.781 \\
+2978-29412 & 0.2 & 0.1 & 0.733 \\
+3352-89556 & 0.2 & 0.1 & 0.739 \\
 \hline
 \end{tabular}
 \caption{\label{tab:results2} The resulting best fit $\omega$ values per parsed UHECR event and the correlation coefficient $\rho$. }
@@ -247,19 +253,20 @@ In their 2022 paper, Hanson and Hartig ..... implying.......
 with this in mind we can theorize for our events that.....
 [[Table for every UHECR and its $\omega_0$ vs $\omega_c$]]
 this work also wrote on the hadronic vs electro magnetic effect.... we elaborate on this in that ....... and from our data we see..... 
-[[do we use statistics to imply further about cosmology/UHECR origins?]]
 
-We believe our work can greatly contribute to the field by..... COMMA .... AND .... IF NOT AT THE LEAST.....
+[[do we use statistics to imply further about cosmology/UHECR origins?]] 
 
+if epsilon is a certain set for on cone vs off cone we can tell difference between EM and hadronic cases because of subtle differences.... 
 
 \section{Acknowledgments}
 \label{sec:Ack}
-Our work greatly builds off the research done by Jordan C. Hanson, Amy L. Connolly, and Raymond Hartig. Without them the framework to derive our \textit{on-cone} model would not be present. As well as all the scientists before them.
+Our work greatly builds off the research done by Jordan C. Hanson, Raymond Hartig and the ARA collaboration. Without them the framework to derive our \textit{on-cone} model would not be present. 
 
-We thank Whittier College, especially Whittier Alumni Barbara Ondrasik and David Groce for their contributions to keeping this research going during the summer of 2026 via their name-sake fellowship. 
+We thank Whittier College, especially Whittier Alumni Barbara Ondrasik and David Groce for their financial contributions to keeping this research going during the summer of 2026 via their name-sake fellowship. 
 
 Once more, we thank the ARA collaboration for their data release. 
 
+\newpage
 
 \subsection{Appendix A.}
 
@@ -270,6 +277,11 @@ s * r = E_0R_0( \\ 2e^{-2\omega_ct}(\frac{2\omega_c-2\pi\gamma}{(2\omega_c-2\pi\
  -(1+\frac{1}{2}\epsilon)e^{-\omega_0t}(\frac{\omega_0-2\pi\gamma}{(\omega_0-2\pi\gamma)^2+(2\pi f_0)^2}e^{(\omega_0-2\pi\gamma)t}cos(2\pi f_0 t)- \frac{\omega_0-2\pi\gamma}{(\omega_0-2\pi\gamma)^2+(2\pi f_0)^2}) \\ + (1-\frac{1}{2}\epsilon)e^{\omega_0t}(\frac{-\omega_0-2\pi\gamma}{(-\omega_0-2\pi\gamma)^2+(2\pi f_0)^2})e^{(-\omega_0-2\pi\gamma)t}cos(2\pi f_0t) \ \ \ \ )
 \end{multline}
 
+\newpage 
+
+-
+
+\newpage
 
 \subsection{Appendix B.}
 
@@ -322,17 +334,20 @@ else:
 	best_omegaC = 0.1
 	for omegaN in omegaNs:
 		for omegaC in omegaCs:	
-			for i in range(trace_length):
+\end{verbatim}
+
+\newpage
+-
+\newpage
+
+
+\begin{verbatim}
+			for i in range(trace_length): 
 				model[i] = utilitea.math_conv(times[i],1,1,f0,gamma,omegaN,omegaC,Dc,D0,H) 
 			model = model/np.sqrt(np.inner(model,model))
-			rho = np.max(np.abs(correlate(model,csw)))
-			print(f"{rho} rho, {omegaN} omegaN, {omegaC} omegaC")
-			if(rho>rho_max):
-				best_omegaN = omegaN
-				best_omegaC = omegaC
-				rho_max = rho
-	print(f"Best correlation coefficient is = {rho_max} \n best_omegaN = {best_omegaN} \n best_omegaC = {best_omegaC} \n epsilion = {best_omegaN/best_omegaC}")
+
 \end{verbatim}
+[[finish formatting when code is debugged]]
 
 
 
